@@ -1,4 +1,4 @@
-import { Sequelize } from "sequelize";
+var Sequelize = require('sequelize');
 
 const sequelize = new Sequelize(
   // POSTGRES
@@ -17,11 +17,11 @@ const sequelize = new Sequelize(
 
 const Person = sequelize.define('Person', {
   firstname: {
-    type: Sequelize.toString,
+    type: Sequelize.STRING,
     allowNull: false
   },
   lastname: {
-    type: Sequelize.toString,
+    type: Sequelize.STRING,
     allowNull: false
   },
 });
